@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= pageTitle %></title>
+</head>
+<body>
+    <a href="/">Registro</a>
+    <a href="/users">Usuarios</a>
+
+    <main>
+        <% if (users.length > 0) { %>
+            <div>
+                <% for (let user of users) { %>
+                    <article>
+                        <header>
+                            <h1><%= user.nameU %></h1>
+                        </header>
+                    </article>
+                <% } %>
+            </div>
+        <% } else { %>
+            <h1>No hay usuarios</h1>
+        <% } %>
+    </main>
+</body>
+</html>
