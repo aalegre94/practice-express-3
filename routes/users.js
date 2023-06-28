@@ -1,12 +1,8 @@
 const express = require("express");
 const router = express.Router();
 
-const adminData = require("./admin");
+const userController = require("../controller/usuarios");
 
-router.get("/users", (req, res, next) => {
-  console.log("admin.js", adminData.usuarios);
-  const misUsuarios = adminData.usuarios;
-  res.render("users", { users: misUsuarios, pageTitle: "Usuarios" });
-});
+router.get("/users", userController.getUsers);
 
 module.exports = router;

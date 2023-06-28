@@ -14,9 +14,11 @@
             <div>
                 <% for (let user of users) { %>
                     <article>
-                        <header>
-                            <h1><%= user.nameU %></h1>
-                        </header>
+                        <ul>
+                            <li>
+                                <h1><%= user.lastNameU %> - <%= user.nameU %></h1>
+                            </li>
+                        </ul>
                     </article>
                 <% } %>
             </div>
